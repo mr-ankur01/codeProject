@@ -1,0 +1,11 @@
+{
+    "title": "tshirt1",
+    "slug": "tshirt5",
+    "img": "tshirt.webp",
+    "desc": "this is dese",
+    "category": "tshirt",
+    "size": "S",
+    "color": "Black",
+    "price": 499,
+    "availableQty": 1
+  }
