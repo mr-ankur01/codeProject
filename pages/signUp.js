@@ -54,6 +54,7 @@ const SignUp = () => {
       progress: undefined,
       theme: "light",
       });
+      router.push("/signUp")
   }
     return (
         <div className='min-h-full md:mt-10 mt-40'>

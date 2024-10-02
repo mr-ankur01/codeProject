@@ -10,7 +10,7 @@ const Tshirts = ({ products }) => {
             <Head>
                 <title>Tshirts - Urban Threads.com</title>
             </Head>
-            {Object.keys(products).length === 0 && <p> Sorry all the tshirts are curently out of stock.New stock coing soon.Stay Tuned!</p>}
+            {Object.keys(products).length === 0 && <p> Sorry we are currently out of stock.New stock coming soon.Stay Tuned!</p>}
             {Object.keys(products).map((item) => {
                 return (
                     <div key={products[item]._id} className="mx-[5%] lg:w-[15%] md:w-1/2 p-4 w-full shadow-2xl ">

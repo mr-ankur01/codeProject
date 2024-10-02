@@ -1,69 +1,68 @@
 {
+  "title": "tshirt1",
+  "slug": "tshirt5",
+  "img": "tshirt.webp",
+  "desc": "this is dese",
+  "category": "tshirt",
+  "size": "S",
+  "color": "Black",
+  "price": 499,
+  "availableQty": 1
+}
+[
+  {
     "title": "tshirt1",
-    "slug": "tshirt5",
+    "slug": "tshirt1",
     "img": "tshirt.webp",
     "desc": "this is dese",
     "category": "tshirt",
     "size": "S",
+    "color": "Red",
+    "price": "499",
+    "availableQty": 1
+  },
+  {
+    "title": "tshirt1",
+    "slug": "tshirt",
+    "img": "tshrit1.jpg",
+    "desc": "this is dese",
+    "category": "tshirt",
+    "size": "S",
+    "color": "Red",
+    "price": "499",
+    "availableQty": 1
+  },
+  {
+    "title": "tshirt1",
+    "slug": "tshirt2",
+    "img": "AllenSollyblack.jpg",
+    "desc": "this is dese",
+    "category": "tshirt",
+    "size": "M",
+    "color": "Red",
+    "price": "499",
+    "availableQty": 1
+  },
+  {
+    "title": "tshirt1",
+    "slug": "tshirt4",
+    "img": "Vanyellow.jpg",
+    "desc": "this is dese",
+    "category": "tshirt",
+    "size": "M",
     "color": "Black",
-    "price": 499,
+    "price": "499",
+    "availableQty": 1
+  },
+  {
+    "title": "tshirt1",
+    "slug": "tshirt5",
+    "img": "tshirt4.jpg",
+    "desc": "this is dese",
+    "category": "tshirt",
+    "size": "S",
+    "color": "Black",
+    "price": "499",
     "availableQty": 1
   }
-  [
-    {
-      title: 'tshirt1',
-      slug: 'tshirt1',
-      img: 'tshirt.webp',
-      desc: 'this is dese',
-      category: 'tshirt',
-      size: 'S',
-      color: 'Red',
-      price: '499',
-      availableQty: 1,
-    },
-    {
-      title: 'tshirt1',
-      slug: 'tshirt2',
-      img: 'tshirt.webp',
-      desc: 'this is dese',
-      category: 'tshirt',
-      size: 'S',
-      color: 'Red',
-      price: '499',
-      availableQty: 1,
-    },
-    {
-      title: 'tshirt1',
-      slug: 'tshirt3',
-      img: 'tshirt.webp',
-      desc: 'this is dese',
-      category: 'tshirt',
-      size: 'M',
-      color: 'Red',
-      price: '499',
-      availableQty: 1,
-    },
-    {
-      title: 'tshirt1',
-      slug: 'tshirt4',
-      img: 'tshirt.webp',
-      desc: 'this is dese',
-      category: 'tshirt',
-      size: 'M',
-      color: 'Black',
-      price: '499',
-      availableQty: 1,
-    },
-    {
-      title: 'tshirt1',
-      slug: 'tshirt5',
-      img: 'tshirt.webp',
-      desc: 'this is dese',
-      category: 'tshirt',
-      size: 'S',
-      color: 'Black',
-      price: '499',
-      availableQty: 1,
-    }
-  ]
-  
+]

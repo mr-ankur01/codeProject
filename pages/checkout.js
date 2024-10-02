@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import { AiFillPlusCircle, AiFillMinusCircle } from 'react-icons/ai';
 import { BsFillBagCheckFill } from 'react-icons/bs';
 import Head from 'next/head'
-import Script from 'next/script';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -54,11 +53,27 @@ const CheckOut = ({ user, userDetail, Cart, clearCart, addToCart, removeFromCart
             progress: undefined,
             theme: "light",
         });
+        saveOrder()
         setTimeout(() => {
             router.push('/');
         }, 3000);
     }
 
+    const saveOrder = async () => {
+        const products = localStorage.getItem('Cart')
+        console.log(products)
+        const amount = products[0].price
+        const orderId = 1
+        let data = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/addorder`, {
+            method: "POST",
+            body: JSON.stringify({ name, email, address, phone, pincode, city, state ,products,amount,orderId}),
+            Headers: {
+                "Content-type": "application/json",
+            },
+        })
+        console.log(data)
+
+    }
     return (
         <div className='min-h-screen md:mt-20 mt-44'>
             <ToastContainer
@@ -78,7 +93,6 @@ const CheckOut = ({ user, userDetail, Cart, clearCart, addToCart, removeFromCart
                     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
                     <title>CheckOut - Urban Threads.com</title>
                 </Head>
-                <Script type="application/javascript" src="https://checkout.razorpay.com/v1/checkout.js" />
                 <h1 className='font-bold text-3xl my-8 text-center'>CheckOut</h1>
                 <h2 className='font-bold my-8'>1.Delivery Details</h2>
                 <div className='container mx-auto px-4'>

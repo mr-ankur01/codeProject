@@ -9,12 +9,10 @@ const OrderSchema = new mongoose.Schema({
     city: {type:String, default: ""},
     state: {type:String, default: ""},
     orderId: {type:String, required: true},
-    paymentInfo: {type:String, default: ""},
-    transactionId: {type:String, default: ""},
     products:{type:Object,required:true},
     amount:{type:Number,required:true},
-    status:{type: String,default:"Initiated",required:true},    
-    delivery:{type: String,default:"unshipped",required:true}    
+    status:{type: String,default:"Initiated",required:true},
+    delivery:{type: String,default:"unshipped",required:true}
   },{timestamps:true});
 //   mongoose.models={}
 //  export default mongoose.model("Order",OrderSchema);

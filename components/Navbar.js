@@ -28,9 +28,9 @@ const Navbar = ({ Signout, user, userDetail, Cart, addToCart, removeFromCart, cl
     </Link>
     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center font-bold">
       <Link href="/product/tshirt" className="mr-10 hover:text-pink-900">Tshirts</Link>
-      <Link href="/product/tshirt" className="mr-10 hover:text-pink-900">Jeans</Link>
-      <Link href="/product/tshirt" className="mr-10 hover:text-pink-900">Hoodies</Link>
-      <Link href="/product/tshirt" className="mr-10 hover:text-pink-900">Shirt</Link>
+      <Link href="/product/jeans" className="mr-10 hover:text-pink-900">Jeans</Link>
+      <Link href="/product/hoodies" className="mr-10 hover:text-pink-900">Hoodies</Link>
+      <Link href="/product/shirt" className="mr-10 hover:text-pink-900">Shirt</Link>
     </nav>
     {user.value ? (
       <div>
