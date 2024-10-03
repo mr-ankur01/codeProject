@@ -21,19 +21,7 @@ const Tshirts = ({ products }) => {
                                 <h2 className="text-gray-900  font-bold mb-1">{products[item].title}</h2>
                                 <h3 className="text-gray-500 ">{products[item].desc}</h3>
                                 <p className="mt-1 font-semibold">₹ {products[item].price}</p>
-                                <div className="mt-1 font-semibold">
-                                    {products[item].size.includes('S') && <span className='border border-gray-500 px-1 mx-1'>S</span>}
-                                    {products[item].size.includes('M') && <span className='border border-gray-500 px-1 mx-1'>M</span>}
-                                    {products[item].size.includes('L') && <span className='border border-gray-500 px-1 mx-1'>L</span>}
-                                    {products[item].size.includes('XL') && <span className='border border-gray-500 px-1 mx-1'>XL</span>}
-                                    {products[item].size.includes('XXL') && <span className='border border-gray-500 px-1 mx-1'>XXL</span>}
-                                </div>
-                                <div className="mt-1 font-semibold">
-                                    {products[item].color.includes('Red') && <button className="border-2 border-gray-300 ml-1 bg-red-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                                    {products[item].color.includes('Blue') && <button className="border-2 border-gray-300 ml-1 bg-blue-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                                    {products[item].color.includes('Yellow') && <button className="border-2 border-gray-300 ml-1 bg-yellow-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                                    {products[item].color.includes('Black') && <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                                </div>
+                                
                             </div>
                         </Link>
                     </div>

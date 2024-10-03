@@ -54,24 +54,26 @@ const CheckOut = ({ user, userDetail, Cart, clearCart, addToCart, removeFromCart
             theme: "light",
         });
         saveOrder()
-        setTimeout(() => {
-            router.push('/');
-        }, 3000);
+        // setTimeout(() => {
+        //     router.push('/');
+        // }, 3000);
     }
 
     const saveOrder = async () => {
         const products = localStorage.getItem('Cart')
         console.log(products)
-        const amount = products[0].price
+        const amount = Object.values(products)[0]
         const orderId = 1
-        let data = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/addorder`, {
+        const data = { name, email, address, phone, pincode, city, state ,products,orderId,amount}
+        console.log(data,amount)
+        const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/addorder`, {
             method: "POST",
-            body: JSON.stringify({ name, email, address, phone, pincode, city, state ,products,amount,orderId}),
+            body: JSON.stringify(data),
             Headers: {
                 "Content-type": "application/json",
             },
         })
-        console.log(data)
+        console.log(res)
 
     }
     return (

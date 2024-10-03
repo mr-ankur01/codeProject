@@ -57,6 +57,7 @@ export default function Page({ buyNow, addToCart, product, variants }) {
   const onChangePin = (e) => {
     setPin(e.target.value)
   }
+  let stylecss = {font:"solid"}
 
   const refreshvariant = (newColor, newSize) => {
     let url = `${process.env.NEXT_PUBLIC_HOST}/product/${variants[newColor][newSize]["slug"]}`
@@ -65,6 +66,7 @@ export default function Page({ buyNow, addToCart, product, variants }) {
   }
   return (
     <section className="text-gray-600 body-font min-h-screen overflow-hidden md:mt-10 mt-40">
+      <div className="bg-red-500 bg-yellow bg-blue bg-white bg-black"></div>
       <ToastContainer
         position="bottom-center"
         autoClose={1000}
@@ -94,51 +96,14 @@ export default function Page({ buyNow, addToCart, product, variants }) {
             <p className="leading-relaxed">{product.desc}</p>
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
               <div className="flex">
-                <span className="mr-3">Color</span>
-                {Object.keys(variants).includes("Red") && Object.keys(variants["Red"]).includes(size) &&
-                  <button
-                    onClick={() => refreshvariant("Red", size)}
-                    className={`border-2 ml-1 bg-red-700 rounded-full w-6 h-6 ${color === "Red" ? "border-black" : "border-gray-300"}`}
-                  ></button>
-                }
-                {Object.keys(variants).includes("Blue") && Object.keys(variants["Blue"]).includes(size) &&
-                  <button
-                    onClick={() => refreshvariant("Blue", size)}
-                    className={`border-2 ml-1 bg-blue-700 rounded-full w-6 h-6 ${color === "Blue" ? "border-black" : "border-gray-300"}`}
-                  ></button>
-                }
-                {Object.keys(variants).includes("Black") && Object.keys(variants["Black"]).includes(size) &&
-                  <button
-                    onClick={() => refreshvariant("Black", size)}
-                    className={`border-2 ml-1 bg-gray-900 rounded-full w-6 h-6 ${color === "Black" ? "border-black" : "border-gray-300"}`}
-                  ></button>
-                }
-                {Object.keys(variants).includes("Yellow") && Object.keys(variants["Yellow"]).includes(size) &&
-                  <button
-                    onClick={() => refreshvariant("Yellow", size)}
-                    className={`border-2 ml-1 bg-yellow-700 rounded-full w-6 h-6 ${color === "Yellow" ? "border-black" : "border-gray-300"}`}
-                  ></button>
-                }
+                <span className="mr-3">Color :</span>
+                <p style={stylecss}>{product.color}</p>
               </div>
               <div className="flex ml-6 items-center">
-                <span className="mr-3">Size</span>
+                <span className="mr-3">Size :</span>
                 <div className="relative">
-                  <select
-                    defaultValue={size}
-                    onChange={(e) => refreshvariant(color, e.target.value)}
-                    className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-pink-200 focus:border-pink-500 text-base pl-3 pr-10"
-                  >
-                    {Object.keys(variants[color]).includes("S") && <option value={"S"}>S</option>}
-                    {Object.keys(variants[color]).includes("M") && <option value={"M"}>M</option>}
-                    {Object.keys(variants[color]).includes("L") && <option value={"L"}>L</option>}
-                    {Object.keys(variants[color]).includes("XL") && <option value={"XL"}>XL</option>}
-                    {Object.keys(variants[color]).includes("XXL") && <option value={"XXL"}>XXL</option>}
-                  </select>
-                  <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4" viewBox="0 0 24 24">
-                      <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                  </span>
+                <p>{product.size}</p>
+
                 </div>
               </div>
             </div>
